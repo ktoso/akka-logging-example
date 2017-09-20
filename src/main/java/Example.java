@@ -11,12 +11,6 @@ import com.typesafe.config.ConfigFactory;
 
 public class Example {
   public static void main(String[] args) throws InterruptedException {
-//    final Config configuration = ConfigFactory.load(ConfigFactory.parseString(
-//      "akka {" +
-//        "  loggers = [\"akka.event.slf4j.Slf4jLogger\"]\r\n" +
-//        "  loglevel = \"DEBUG\"\r\n" +
-//        "  logging-filter = \"akka.event.slf4j.Slf4jLoggingFilter\"\r\n" +
-//        "}"));
     final ActorSystem system = ActorSystem.create("QuickStart");
     final Materializer materializer = ActorMaterializer.create(system);
 
